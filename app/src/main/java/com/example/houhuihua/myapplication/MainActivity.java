@@ -216,10 +216,13 @@ public class MainActivity extends AppCompatActivity {
 
         private void initRate() {
             if (getWidth() < getHeight()) {
-                RATIO_W = getWidth() / 360;
+                RATIO_W = getWidth() / 320;
             }
             else {
-                RATIO_W = getHeight() / 360;
+                RATIO_W = getHeight() / 320;
+            }
+            if (RATIO_W >= 3) {
+                RATIO_W -= 0.8f;
             }
             RATIO_H = RATIO_W;
         }
@@ -260,12 +263,13 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-
+/*
                         try {
                             Thread.sleep(1);
                         } catch (Exception e) {
 
                         }
+                        */
                     }
                 }
 
